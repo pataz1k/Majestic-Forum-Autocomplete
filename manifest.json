@@ -1,0 +1,32 @@
+{
+  "name": "Majestic Forum AutoComplete",
+  "version": "1.0",
+  "description": "Автозаполнение Жалобы на форуме MajesticRP",
+  "manifest_version": 3,
+  "author": "pataz1k",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  "host_permissions": ["https://forum.majestic-rp.ru/*"],
+  "action": {
+    "default_icon": {
+      "16": "/icons/icon16.png",
+      "32": "/icons/icon32.png",
+      "48": "/icons/icon48.png",
+      "128": "/icons/icon128.png"
+    },
+    "default_popup": "/popup/popup.html",
+    "default_title": "Majestic Forum AutoComplete"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://forum.majestic-rp.ru/*"],
+      "js": ["/scripts/background.js"]
+    }
+  ],
+
+  "permissions": ["storage", "activeTab", "tabs"]
+}
